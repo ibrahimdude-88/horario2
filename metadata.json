@@ -1,0 +1,5 @@
+{
+  "name": "ShiftRotator 2026",
+  "description": "A comprehensive rotating shift management dashboard featuring automatic 7-week cycle calculation, admin controls, and shift swapping capabilities.",
+  "requestFramePermissions": []
+}

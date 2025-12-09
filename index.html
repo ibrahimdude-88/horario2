@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shift Management 2026</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6",
+              "primary-dark": "#2563EB",
+              "background-light": "#F3F4F6",
+              "background-dark": "#111827",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      .glassmorphism {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .dark .glassmorphism {
+        background: rgba(31, 41, 55, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/",
+    "vite": "https://aistudiocdn.com/vite@^7.2.7",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display transition-colors duration-200">
+    <div id="root"></div>
+    <!-- Point to the src folder -->
+    <script type="module" src="/src/main.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
