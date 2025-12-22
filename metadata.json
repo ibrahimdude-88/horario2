@@ -1,5 +1,5 @@
 {
-  "name": "ShiftRotator 2026",
-  "description": "A comprehensive rotating shift management dashboard featuring automatic 7-week cycle calculation, admin controls, and shift swapping capabilities.",
+  "name": "Horarios ST 2026",
+  "description": "Sistema integral de gestión de turnos rotativos para ST, con cálculo automático de ciclos, controles administrativos y gestión de excepciones.",
   "requestFramePermissions": []
 }

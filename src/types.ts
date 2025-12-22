@@ -1,10 +1,10 @@
-export type ShiftLocation = 'Guardia' | 'Valle' | 'Mitras' | 'Descanso' | 'Office';
+
+export type ShiftLocation = 'Guardia' | 'Valle' | 'Mitras' | 'Descanso' | 'VACACIONES';
 
 export interface Shift {
   dayIndex: number;
   label: string;
   location: ShiftLocation;
-  isToday?: boolean;
 }
 
 export interface ScheduleTemplate {
@@ -17,7 +17,6 @@ export interface Employee {
   id: string;
   name: string;
   baseScheduleId: number;
-  avatarUrl?: string;
 }
 
 export interface SwapRequest {
@@ -26,7 +25,6 @@ export interface SwapRequest {
   requesterId: string;
   targetId: string;
   reason: string;
-  status: 'pending' | 'approved' | 'rejected';
 }
 
 export interface Vacation {
@@ -34,6 +32,14 @@ export interface Vacation {
   employeeId: string;
   start: Date;
   end: Date;
+}
+
+export interface ShiftOverride {
+  id: string;
+  employeeId: string;
+  date: string; 
+  location: ShiftLocation;
+  reason?: string;
 }
 
 export interface AppState {

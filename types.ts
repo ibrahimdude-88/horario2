@@ -1,32 +1,29 @@
-export type ShiftLocation = 'Guardia' | 'Valle' | 'Mitras' | 'Descanso' | 'Office';
+export type ShiftLocation = 'Guardia' | 'Valle' | 'Mitras' | 'Descanso' | 'VACACIONES';
 
 export interface Shift {
-  dayIndex: number; // 0 = Monday, 6 = Sunday
-  label: string; // e.g., "07:00 - 15:00"
+  dayIndex: number;
+  label: string;
   location: ShiftLocation;
-  isToday?: boolean;
 }
 
 export interface ScheduleTemplate {
   id: number;
   name: string;
-  shifts: Shift[]; // Array of 7 shifts (Mon-Sun)
+  shifts: Shift[];
 }
 
 export interface Employee {
   id: string;
   name: string;
-  baseScheduleId: number; // The schedule they have on Week 1
-  avatarUrl?: string;
+  baseScheduleId: number;
 }
 
 export interface SwapRequest {
   id: string;
   weekNumber: number;
-  requesterId: string; // Who initiates/leaves the shift
-  targetId: string;    // Who takes the shift
+  requesterId: string;
+  targetId: string;
   reason: string;
-  status: 'pending' | 'approved' | 'rejected';
 }
 
 export interface Vacation {
@@ -34,6 +31,13 @@ export interface Vacation {
   employeeId: string;
   start: Date;
   end: Date;
+}
+
+export interface ShiftOverride {
+  id: string;
+  employeeId: string;
+  date: string; 
+  location: ShiftLocation;
 }
 
 export interface AppState {

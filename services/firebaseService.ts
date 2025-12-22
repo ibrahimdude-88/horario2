@@ -1,3 +1,4 @@
+
 import { ref, onValue, push, set, remove, update } from "firebase/database";
 import { db } from "../firebaseConfig";
 
@@ -48,4 +49,13 @@ export const removeData = async (path: string, id: string) => {
 export const updateData = async (path: string, id: string, data: any) => {
   const itemRef = ref(db, `${path}/${id}`);
   await update(itemRef, data);
+};
+
+// Added missing clearPath function required for reset logic in App.tsx
+/**
+ * Clears an entire path in the database. Used for factory reset.
+ */
+export const clearPath = async (path: string) => {
+  const dataRef = ref(db, path);
+  await set(dataRef, null);
 };
